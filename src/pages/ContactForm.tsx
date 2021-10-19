@@ -61,10 +61,10 @@ export const ContactForm = () => {
         style={{
           maxWidth: 450,
           height: '100vh',
-
           margin: 'auto'
         }}
       >
+        <Grid item xs={12} style={{ minHeight: '100px' }}></Grid>
         <Grid item xs={12}>
           <Paper elevation={3} style={{ padding: '40px 20px' }}>
             <Formik

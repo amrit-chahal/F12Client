@@ -1,21 +1,29 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
 
 import './css/App.css';
-import { ContactForm } from './pages/ContactForm';
-import { ContactFormSubmission } from './pages/ContactFormSubmission';
-import { HomePage } from './pages/HomePage';
-import { PropMate } from './pages/PropMate';
+import {
+  HomePage,
+  ContactForm,
+  ContactFormSubmission,
+  PropMate,
+  Blog,
+  DeveloperProfile
+} from './pages';
 
 function App() {
   return (
     <BrowserRouter>
       <div className='App'>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/contact' component={ContactForm} />
           <Route path='/contactsubmission' component={ContactFormSubmission} />
           <Route path='/propmate' component={PropMate} />
+          <Route path='/blog' component={Blog} />
+          <Route path='/developerprofile' component={DeveloperProfile} />
           <Route component={HomePage} />
         </Switch>
       </div>
