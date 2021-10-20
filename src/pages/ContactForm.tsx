@@ -59,14 +59,13 @@ export const ContactForm = () => {
         justifyContent='center'
         alignItems='center'
         style={{
-          maxWidth: 450,
-          height: '100vh',
-          margin: 'auto'
+          maxWidth: 450,         
+          margin: 'auto',
+          marginTop: '20vh'
         }}
       >
-        <Grid item xs={12} style={{ minHeight: '100px' }}></Grid>
         <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: '40px 20px' }}>
+          <Paper elevation={3} style={{ padding: '30px 20px' }}>
             <Formik
               validateOnChange={true}
               initialValues={{

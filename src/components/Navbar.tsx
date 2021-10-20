@@ -20,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgba(0, 0, 0, 0.1)'
   },
   navbar: {
+    backgroundColor:'white',
     paddingBottom: '10px',
     position: 'fixed',
-    top: 100,
+    top: '0',
+    paddingTop:'10vh',
+   
     borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
   }
 }));
