@@ -59,9 +59,10 @@ export const ContactForm = () => {
         justifyContent='center'
         alignItems='center'
         style={{
-          maxWidth: 450,         
+          maxWidth: 450,
           margin: 'auto',
-          marginTop: '20vh'
+          paddingTop: '2vh',
+          paddingBottom: '5vh'
         }}
       >
         <Grid item xs={12}>
@@ -92,7 +93,7 @@ export const ContactForm = () => {
 
                 if (response.ok) {
                   history.push({
-                    pathname: '/contactsubmission',
+                    pathname: '/contact_submission',
                     state: { success: true }
                   });
                 } else {

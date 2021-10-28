@@ -17,13 +17,14 @@ function App() {
     <BrowserRouter>
       <div className='App'>
         <Navbar />
+
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/contact' component={ContactForm} />
-          <Route path='/contactsubmission' component={ContactFormSubmission} />
+          <Route path='/contact_submission' component={ContactFormSubmission} />
           <Route path='/propmate' component={PropMate} />
           <Route path='/blog' component={Blog} />
-          <Route path='/developerprofile' component={DeveloperProfile} />
+          <Route path='/developer_profile' component={DeveloperProfile} />
           <Route component={HomePage} />
         </Switch>
       </div>
