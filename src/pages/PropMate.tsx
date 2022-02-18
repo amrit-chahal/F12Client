@@ -1,11 +1,9 @@
 import React from 'react';
 
+import imagess from '../static/PropmateScreenshot1.jpg';
+
 interface Props {}
 
 export const PropMate = () => {
-  return (
-    <div>
-      <h1>This is Propmate page</h1>
-    </div>
-  );
+  return <div></div>;
 };

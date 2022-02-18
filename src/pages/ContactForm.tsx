@@ -63,6 +63,7 @@ export const ContactForm = () => {
           margin: 'auto',
           paddingTop: '2vh',
           paddingBottom: '5vh'
+          
         }}
       >
         <Grid item xs={12}>

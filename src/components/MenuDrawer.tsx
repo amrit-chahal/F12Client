@@ -15,21 +15,26 @@ import CloseIcon from '@material-ui/icons/Close';
 const useStyles = makeStyles(() => ({
   link: {
     textDecoration: 'none',
-    color: '#6d696a',
+    color: '#fff',
     fontSize: '20px'
   },
   listItem: {
-    borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+    borderTop: '1px solid #fff',
     textAlign: 'center',
-    display: 'block'
+    display: 'block',
+    background: '#3f50b5',
+    '&:hover': {
+      cursor: 'pointer',
+      color: '#fff',
+      background: '#002884'
+    }
   },
 
   icon: {
-    color: 'white'
+    color: '#fff'
   },
-  menuButton: {
-    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-    backgroundColor: 'white',
+  appBar: {
+    backgroundColor: '#3f50b5',
     zIndex: 1,
     position: 'fixed',
     bottom: 0,
@@ -105,13 +110,15 @@ export const MenuDrawer = (props: Props) => {
             className={classes.listItem}
             onClick={() => setOpenDrawer(false)}
           >
-            <ListItemText><CloseIcon fontSize='medium'/></ListItemText>
+            <ListItemText>
+              <CloseIcon fontSize='medium' className={classes.icon} />
+            </ListItemText>
           </ListItem>
         </List>
       </Drawer>
-      <div className={classes.menuButton}>
+      <div className={classes.appBar}>
         <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
-          <MenuIcon fontSize='medium' />
+          <MenuIcon fontSize='medium' className={classes.icon} />
         </IconButton>
       </div>
     </>
