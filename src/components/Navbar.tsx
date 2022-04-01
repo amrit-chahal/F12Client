@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgba(0, 0, 0, 0.1)'
   },
   navbar: {
-    backgroundColor: '#3f50b5',
+    background:
+      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 0%, rgba(0,124,255,1) 100%)',
     paddingBottom: '10px',
 
     paddingTop: '10vh',
@@ -38,7 +39,12 @@ const useStyles = makeStyles((theme) => ({
   f12Heading: {
     color: '#fff',
     fontWeight: 500,
+    padding: '5px 20px',
     position: 'fixed',
+    borderRadius: '30px',
+
+    background:
+      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(29,122,168,1) 0%, rgba(0,124,255,1) 100%)',
     top: 20,
     left: 100,
     zIndex: 101

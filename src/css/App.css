@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 90px;
+  min-height: 70vh;
+  padding-bottom: 130px;
 }
 .f12-section {
   background-color: yellow;

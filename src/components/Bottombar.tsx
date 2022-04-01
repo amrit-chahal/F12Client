@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core';
+import { Grid, useMediaQuery, useTheme } from '@material-ui/core';
 import { WidgetsSharp } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
@@ -7,9 +7,10 @@ import azureIcon from '../static/azure_icon.png';
 import firebaseIcon from '../static/firebase_icon.png';
 import reactIcon from '../static/react_icon.png';
 import React from 'react';
+
 const useStyles = makeStyles(() => ({
   footer: {
-    height: '80px',
+    height: '130px',
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
     backgroundColor: 'rgba(0, 0, 0, 0.03)'
   }
@@ -17,6 +18,9 @@ const useStyles = makeStyles(() => ({
 
 export const Bottombar = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down(900));
+
   return (
     <Grid
       container

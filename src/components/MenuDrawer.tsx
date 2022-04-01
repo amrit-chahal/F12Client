@@ -22,7 +22,8 @@ const useStyles = makeStyles(() => ({
     borderTop: '1px solid #fff',
     textAlign: 'center',
     display: 'block',
-    background: '#3f50b5',
+    background:
+      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 0%, rgba(0,124,255,1) 100%)',
     '&:hover': {
       cursor: 'pointer',
       color: '#fff',
@@ -34,7 +35,8 @@ const useStyles = makeStyles(() => ({
     color: '#fff'
   },
   appBar: {
-    backgroundColor: '#3f50b5',
+    background:
+      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 0%, rgba(0,124,255,1) 100%)',
     zIndex: 1,
     position: 'fixed',
     bottom: 0,
