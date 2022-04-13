@@ -3,7 +3,8 @@ import {
   makeStyles,
   CssBaseline,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Box
 } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import React, { useEffect } from 'react';
@@ -19,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20px',
     margin: theme.spacing(5),
     '&:hover': {
-      background: 'rgba(0, 0, 0, 0.1)'
+      background: '#008df5',
     }
   },
   activeLink: {
-    background: 'rgba(0, 0, 0, 0.1)'
+    background: '#008df5'
   },
   navbar: {
     background:
@@ -38,37 +39,46 @@ const useStyles = makeStyles((theme) => ({
   },
   f12Heading: {
     color: '#fff',
-    fontWeight: 500,
-    padding: '5px 20px',
-    position: 'fixed',
-    borderRadius: '30px',
+    position: 'relative',
+    left: '-7px',
+    fontSize: '50px',
 
-    background:
-      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(29,122,168,1) 0%, rgba(0,124,255,1) 100%)',
-    top: 20,
-    left: 100,
-    zIndex: 101
+    transform: 'rotate(-45deg)',
+    zIndex: 103,
+    fontFamily: 'Saira Stencil One',
+    WebkitTextStrokeWidth: '1px',
+    WebkitTextStrokeColor: '#000',
+  },
+  f12HeadingBackground: {
+    top: '3vh',
+    left: '5vw',
+    position: 'fixed',
+    textAlign: 'center',
+    zIndex: 110,
+    width: '50px',
+    height: '50px',
+    background: '#f05030',
+    borderRadius: '7px',
+    transform: 'rotate(45deg)'
   }
 }));
 
 export const Navbar = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down(900));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
+      <Box className={classes.f12HeadingBackground}>
+        <Typography className={classes.f12Heading} variant='h4' color='primary'>
+          f12
+        </Typography>
+      </Box>
       {isMobile ? (
         <MenuDrawer />
       ) : (
         <>
-          <Typography
-            className={classes.f12Heading}
-            variant='h4'
-            color='primary'
-          >
-            f12.website
-          </Typography>
           <div style={{ height: '15vh' }}>
             <Grid
               container

@@ -128,7 +128,7 @@ export const ContactForm = () => {
                     <Form>
                       <Grid container direction='row' spacing={3}>
                         <Grid item xs={12}>
-                          <Typography variant='h5' color='primary' gutterBottom>
+                          <Typography variant='h5' color='primary' align='center' gutterBottom>
                             Contact Me
                           </Typography>
                           <Typography
