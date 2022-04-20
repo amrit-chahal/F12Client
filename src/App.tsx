@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Bottombar } from './components/Bottombar';
 import { Navbar } from './components/Navbar';
+import { Helmet } from 'react-helmet';
 
 import './css/App.css';
 import {
@@ -17,6 +18,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
+        <Helmet>
+          <title> F12 Home</title>
+          <meta
+            name='description'
+            content=' Hi there! Check out my website where I make simple tools to make life simpler!'
+          />
+        </Helmet>
         <div className='f12-navigation'>
           <Navbar />
         </div>

@@ -18,6 +18,7 @@ import pmSlide3 from '../static/pm3.png';
 import pmSlide4 from '../static/pm4.png';
 import pmSlide5 from '../static/pm5.png';
 import { ImageInfo, ImageSlider, Images } from '../components/ImageSlider';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
   propmateImg: {
@@ -31,7 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   btnDownload: {
     height: '60px',
-    width: '40vh',
+    width: '60vw',
+    maxWidth: '400px',
+
     borderRadius: '20px',
     backgroundColor: '#0288d1',
     fontSize: '1rem',
@@ -90,6 +93,15 @@ const useStyles = makeStyles((theme) => ({
     '&>p:nth-child(2)': {
       padding: '10px 15px'
     }
+  },
+  propmatePurpose: {
+    textAlign: 'center',
+    padding: '30px',
+    background: '#e7e7ec',
+    borderRadius: '10px',
+    fontSize: '30px',
+    fontStyle: 'italic',
+    margin: '10px 20px'
   }
 }));
 
@@ -121,6 +133,9 @@ export const PropMate = () => {
   ];
   return (
     <>
+      <Helmet>
+        <title>F12 Propmate</title>
+      </Helmet>
       <Grid
         container
         direction='column'
@@ -180,9 +195,25 @@ export const PropMate = () => {
             size='large'
             endIcon={<DownloadIcon />}
             className={classes.btnDownload}
+            href='https://chrome.google.com/webstore/detail/propmate/oodjdpgcgaoblokiamiiahbacijaeaab'
           >
             Download for Chrome
           </Button>
+        </Grid>
+        <Grid item className={classes.propmatePurpose}>
+          <Typography
+            variant='subtitle1'
+            style={{ fontSize: '1.2rem', fontWeight: '400' }}
+          >
+            Do you ever go back and forth between google maps and trademe when
+            browsing for rentals or properties for sale? Do you ever wonder how
+            nice it would be to have this simple yet important information right
+            in front of you? Well wonder no more! Propmate to the rescue!!
+            Enhance your property browsing experience on trademe by using this
+            extension. Store upto five locations and get time and distance
+            information displayed right next to the listings. Works on rentals
+            and properties for sale on Trademe.
+          </Typography>
         </Grid>
         <Grid item className={classes.propmateContainer}>
           <Grid
@@ -194,25 +225,27 @@ export const PropMate = () => {
             <Grid item xs={12} md={3} className={classes.propmateInfo}>
               <Typography variant='h6'>What is it?</Typography>
               <Typography variant='body1'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                eaque! Quibusdam nam labore nulla in, veniam, ut doloremque iure
-                veritatis eum eius neque amet eligendi esse consequatur.
+                It is a simple chrome extension which can be installed on Google
+                Chrome, Microsoft Edge, Brave or any chromium based browser. To
+                download follow the download link from your favourite browser.
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={3} className={classes.propmateInfo}>
+              <Typography variant='h6'>How to use it?</Typography>
+              <Typography variant='body1'>
+                Simply download it from Chrome Web store and once its installed
+                save upto five of your favourite addresses. The extension will
+                then display the time and distance information right below the
+                Listing address.
               </Typography>
             </Grid>
             <Grid item xs={12} md={3} className={classes.propmateInfo2}>
               <Typography variant='h6'>How does it work?</Typography>
               <Typography variant='body1'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                eaque! Quibusdam nam labore nulla in, veniam, ut doloremque iure
-                veritatis eum eius neque amet eligendi esse consequatur.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={3} className={classes.propmateInfo}>
-              <Typography variant='h6'>How to use it?</Typography>
-              <Typography variant='body1'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                eaque! Quibusdam nam labore nulla in, veniam, ut doloremque iure
-                veritatis eum eius neque amet eligendi esse consequatur.
+                It works by reading the property address of the listing and
+                getting information from google maps to display time and
+                distance between the listing address and your saved addresses.
               </Typography>
             </Grid>
           </Grid>

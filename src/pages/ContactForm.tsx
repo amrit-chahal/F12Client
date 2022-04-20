@@ -14,6 +14,7 @@ import * as Yup from 'yup';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Redirect, useHistory } from 'react-router';
 import { serialize } from 'v8';
+import { Helmet } from 'react-helmet';
 
 export const ContactForm = () => {
   const reCAPTCHAref = useRef<ReCAPTCHA>(null);
@@ -53,6 +54,9 @@ export const ContactForm = () => {
   type ContactFormProps = Yup.InferType<typeof contactFormValidationSchema>;
   return (
     <div className='ContactForm'>
+      <Helmet>
+        <title>F12 Contact</title>
+      </Helmet>
       <Grid
         container
         direction='row'
