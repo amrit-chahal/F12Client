@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
   },
   propmateContainer: {
     textAlign: 'center',
-    padding: '20px'
+    margin: '10px'
   },
   btnDownload: {
     height: '60px',
-    width: '60vw',
+    width: '70vw',
     maxWidth: '400px',
 
     borderRadius: '20px',
@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     fontSize: '30px',
     fontStyle: 'italic',
-    margin: '10px 20px'
+    margin: '10px 4vw'
   }
 }));
 
@@ -141,7 +141,11 @@ export const PropMate = () => {
         direction='column'
         justifyContent='space-between'
         alignItems='center'
-        style={{ padding: '25px', marginTop: '7vh', maxWidth: '1550px' }}
+        style={
+          !isMobile
+            ? { padding: '25px', marginTop: '7vh', maxWidth: '1450px' }
+            : { padding: '25px' }
+        }
       >
         <Grid item className={classes.propmateContainer}>
           <Grid
@@ -219,28 +223,28 @@ export const PropMate = () => {
           <Grid
             container
             direction='row'
-            justifyContent='space-evenly'
+            justifyContent='space-around'
             alignItems='center'
           >
             <Grid item xs={12} md={3} className={classes.propmateInfo}>
               <Typography variant='h6'>What is it?</Typography>
               <Typography variant='body1'>
-                It is a simple chrome extension which can be installed on Google
-                Chrome, Microsoft Edge, Brave or any chromium based browser. To
-                download follow the download link from your favourite browser.
+                It's a simple chrome extension which can be installed on Google
+                Chrome, Microsoft Edge, Brave or any chromium browser. To
+                download follow the download link from your browser.
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={3} className={classes.propmateInfo}>
+            <Grid item xs={12} md={3} className={classes.propmateInfo2}>
               <Typography variant='h6'>How to use it?</Typography>
               <Typography variant='body1'>
                 Simply download it from Chrome Web store and once its installed
                 save upto five of your favourite addresses. The extension will
                 then display the time and distance information right below the
-                Listing address.
+                Listing.
               </Typography>
             </Grid>
-            <Grid item xs={12} md={3} className={classes.propmateInfo2}>
+            <Grid item xs={12} md={3} className={classes.propmateInfo}>
               <Typography variant='h6'>How does it work?</Typography>
               <Typography variant='body1'>
                 It works by reading the property address of the listing and

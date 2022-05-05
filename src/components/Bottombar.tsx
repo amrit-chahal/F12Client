@@ -12,7 +12,8 @@ const useStyles = makeStyles(() => ({
   footer: {
     height: '130px',
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-    backgroundColor: 'rgba(0, 0, 0, 0.03)'
+    backgroundColor: 'rgba(0, 0, 0, 0.03)',
+    zIndex: 100
   }
 }));
 

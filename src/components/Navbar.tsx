@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20px',
     margin: theme.spacing(5),
     '&:hover': {
-      background: '#008df5',
+      background: '#008df5'
     }
   },
   activeLink: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     background:
-      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 0%, rgba(0,124,255,1) 100%)',
+      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 30%, rgba(0,24,36,1) 100%)',
     paddingBottom: '10px',
 
     paddingTop: '10vh',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 103,
     fontFamily: 'Saira Stencil One',
     WebkitTextStrokeWidth: '1px',
-    WebkitTextStrokeColor: '#000',
+    WebkitTextStrokeColor: '#000'
   },
   f12HeadingBackground: {
     top: '3vh',
@@ -79,53 +79,51 @@ export const Navbar = () => {
         <MenuDrawer />
       ) : (
         <>
-          <div style={{ height: '15vh' }}>
-            <Grid
-              container
-              direction='column'
-              alignContent='center'
-              className={classes.navbar}
-            >
-              <Grid item>
-                <NavLink
-                  exact
-                  to='/'
-                  className={classes.link}
-                  activeClassName={classes.activeLink}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to='/propmate'
-                  className={classes.link}
-                  activeClassName={classes.activeLink}
-                >
-                  Propmate
-                </NavLink>
-                <NavLink
-                  to='/developer_profile'
-                  className={classes.link}
-                  activeClassName={classes.activeLink}
-                >
-                  Dev Profile
-                </NavLink>
-                <NavLink
-                  to='/blog'
-                  className={classes.link}
-                  activeClassName={classes.activeLink}
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to='/contact'
-                  className={classes.link}
-                  activeClassName={classes.activeLink}
-                >
-                  Contact
-                </NavLink>
-              </Grid>
+          <Grid
+            container
+            direction='column'
+            alignContent='center'
+            className={classes.navbar}
+          >
+            <Grid item>
+              <NavLink
+                exact
+                to='/'
+                className={classes.link}
+                activeClassName={classes.activeLink}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to='/propmate'
+                className={classes.link}
+                activeClassName={classes.activeLink}
+              >
+                Propmate
+              </NavLink>
+              <NavLink
+                to='/developer_profile'
+                className={classes.link}
+                activeClassName={classes.activeLink}
+              >
+                Dev Profile
+              </NavLink>
+              <NavLink
+                to='/blog'
+                className={classes.link}
+                activeClassName={classes.activeLink}
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to='/contact'
+                className={classes.link}
+                activeClassName={classes.activeLink}
+              >
+                Contact
+              </NavLink>
             </Grid>
-          </div>
+          </Grid>
         </>
       )}
     </>
