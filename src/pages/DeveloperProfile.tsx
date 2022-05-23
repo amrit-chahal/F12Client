@@ -1,8 +1,12 @@
 import { makeStyles } from '@material-ui/styles';
-import { Box, Grid, Paper, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Paper, Typography } from '@material-ui/core';
 import React from 'react';
 import profilePicture from '../static/profilePicture.jpg';
 import propmateIcon from '../static/pm_icon.png';
+import twIcon from '../static/tw_icon.png';
+import liIcon from '../static/li_icon.png';
+import ghIcon from '../static/gh_lite_icon.png';
+import soIcon from '../static/so_icon.png';
 interface Props {}
 interface Skills {
   skill: string;
@@ -22,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     background:
       'linear-gradient(132deg, rgb(65, 80, 95) 0.00%, rgb(36, 37, 38) 100.00%)',
     margin: '20px 0 0 0',
-    padding: '30px'
+    paddingTop: '30px '
   },
   profileHeading: {
     fontFamily: 'Dancing Script',
@@ -49,6 +53,17 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px 10px 0 0 ',
     padding: '10px 20px',
     textAlign: 'center'
+  },
+  profileWorkContainer1: {
+    borderRadius: '10px',
+    background: '#5b83c2',
+    color: 'white'
+  },
+  profileWorkParentContainer: {},
+  profileWorkContainer2: {
+    borderRadius: '10px',
+    background: '#c66139',
+    color: 'white'
   },
   profileWorkPropmateHeading: {
     background: '#404fa5',
@@ -84,6 +99,22 @@ const useStyles = makeStyles((theme) => ({
     background: '#f05030',
     borderRadius: '7px',
     transform: 'rotate(45deg)'
+  },
+  profileContactMeBtn: {
+    margin: '50px 0',
+    minWidth: '20vw',
+    width: '300px',
+    height: '100px',
+    fontSize: '2rem',
+    color: 'white',
+    background:
+      ' radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)'
+  },
+  profileSocialIcon: {
+    borderRadius: '10px',
+    height: '48px',
+    width: '48px',
+    margin: '10px 5px 0 5px'
   }
 }));
 export const DeveloperProfile = (props: Props) => {
@@ -143,13 +174,8 @@ export const DeveloperProfile = (props: Props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
-          <Grid
-            container
-            className={classes.profileHeader}
-            direction='row'
-            justifyContent='space-evenly'
-          >
+        <Grid item className={classes.profileHeader}>
+          <Grid container direction='row' justifyContent='space-evenly'>
             <Grid item>
               <Grid container direction='column'>
                 <Grid item>
@@ -188,6 +214,45 @@ export const DeveloperProfile = (props: Props) => {
                   border: 'solid 8px #b3a171'
                 }}
               ></img>
+            </Grid>
+          </Grid>
+          <Grid container direction='row' justifyContent='center'>
+            <Grid item>
+              <a href='https://twitter.com/Ap00854680'>
+                <img
+                  className={classes.profileSocialIcon}
+                  src={twIcon}
+                  alt='twitter icon'
+                ></img>
+              </a>
+            </Grid>
+            <Grid item>
+              <a href='https://stackoverflow.com/users/16484176/ap-f12'>
+                <img
+                  className={classes.profileSocialIcon}
+                  src={soIcon}
+                  alt='StackOverFlow icon'
+                ></img>
+              </a>
+            </Grid>
+
+            <Grid item>
+              <a href='https://www.linkedin.com/in/a-p-13b400217/'>
+                <img
+                  className={classes.profileSocialIcon}
+                  src={liIcon}
+                  alt='Linkedin Icon'
+                ></img>
+              </a>
+            </Grid>
+            <Grid item>
+              <a href='https://github.com/Ap-f12'>
+                <img
+                  className={classes.profileSocialIcon}
+                  src={ghIcon}
+                  alt='Github icon'
+                ></img>
+              </a>
             </Grid>
           </Grid>
         </Grid>
@@ -274,7 +339,7 @@ export const DeveloperProfile = (props: Props) => {
                       style={{ fontFamily: 'Orelega One' }}
                     >
                       Things I am
-                      <span style={{ color: '#ffed23' }}>great </span>
+                      <span style={{ color: '#ffed23' }}> great </span>
                       at
                     </Typography>
                   </Grid>
@@ -306,20 +371,13 @@ export const DeveloperProfile = (props: Props) => {
             </Grid>
           </Grid>
           <Grid container direction='column' spacing={3}>
-            <Grid item>
+            <Grid item style={{ background: 'transparent' }}>
               <Typography variant='h4' style={{ fontFamily: 'Orelega One' }}>
                 My Work
               </Typography>
             </Grid>
             <Grid item>
-              <Paper
-                elevation={6}
-                style={{
-                  borderRadius: '10px',
-                  background: '#5b83c2',
-                  color: 'white'
-                }}
-              >
+              <Paper elevation={6} className={classes.profileWorkContainer1}>
                 <Grid container>
                   <Grid item md={6} xs={12}>
                     <Grid
@@ -358,19 +416,19 @@ export const DeveloperProfile = (props: Props) => {
                       atque architecto sunt vero minima! Voluptatum natus saepe
                       officia maxime voluptatem. Blanditiis, veniam?
                     </Typography>
+                    <Button
+                      variant='contained'
+                      color='primary'
+                      href='https://chrome.google.com/webstore/detail/propmate/oodjdpgcgaoblokiamiiahbacijaeaab'
+                    >
+                      Click here
+                    </Button>
                   </Grid>
                 </Grid>
               </Paper>
             </Grid>
-            <Grid item>
-              <Paper
-                elevation={6}
-                style={{
-                  borderRadius: '10px',
-                  background: '#c66139',
-                  color: 'white'
-                }}
-              >
+            <Grid item className={classes.profileWorkParentContainer}>
+              <Paper elevation={6} className={classes.profileWorkContainer2}>
                 <Grid container>
                   <Grid item md={6} xs={12}>
                     <Grid
@@ -379,7 +437,7 @@ export const DeveloperProfile = (props: Props) => {
                       style={{ height: '275px' }}
                     >
                       <Grid item className={classes.profileWorkF12Heading}>
-                        <Typography variant='h5'>F12</Typography>
+                        <Typography variant='h5'>Full Stack Dev</Typography>
                       </Grid>
                       <Grid
                         item
@@ -410,9 +468,27 @@ export const DeveloperProfile = (props: Props) => {
                       atque architecto sunt vero minima! Voluptatum natus saepe
                       officia maxime voluptatem. Blanditiis, veniam?
                     </Typography>
+                    <Button
+                      variant='contained'
+                      color='primary'
+                      href='https://f12.website'
+                    >
+                      Click here
+                    </Button>
                   </Grid>
                 </Grid>
               </Paper>
+            </Grid>
+          </Grid>
+          <Grid container justifyContent='center'>
+            <Grid item>
+              <Button
+                variant='contained'
+                href='https://f12.website/contact'
+                className={classes.profileContactMeBtn}
+              >
+                Contact Me
+              </Button>
             </Grid>
           </Grid>
         </Grid>
