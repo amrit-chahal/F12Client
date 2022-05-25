@@ -11,8 +11,8 @@ export interface Images {
 
 const useStyles = makeStyles((theme) => ({
   activeImage: {
-    width: '100%',
-    animation: `$fadeInOut 3000ms ${theme.transitions.easing.easeInOut} infinite 300ms`
+    width: '100%'
+    /* animation: `$fadeInOut 3000ms ${theme.transitions.easing.easeInOut} infinite 300ms`
   },
   '@keyframes fadeInOut': {
     '0%': {
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     '100%': {
       opacity:'0'
     }
+    */
   }
 }));
 

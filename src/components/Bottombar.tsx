@@ -11,9 +11,10 @@ import React from 'react';
 const useStyles = makeStyles(() => ({
   footer: {
     height: '130px',
-    borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-    backgroundColor: 'rgba(0, 0, 0, 0.03)',
-    zIndex: 100
+    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 100,
+    
   }
 }));
 
@@ -30,7 +31,10 @@ export const Bottombar = () => {
       className={classes.footer}
     >
       <Grid item>
-        <Typography variant='overline' style={{ lineHeight: '10px' }}>
+        <Typography
+          variant='overline'
+          style={{ lineHeight: '10px', color: '#dfcfcf' }}
+        >
           Powered by
         </Typography>
       </Grid>
@@ -44,13 +48,13 @@ export const Bottombar = () => {
         >
           <Grid item>
             <a href='https://v4.mui.com/'>
-              <img style={{ height: '16px' }} src={muiIcon} alt='Material Ui' />
+              <img style={{ height: '24px' }} src={muiIcon} alt='Material Ui' />
             </a>
           </Grid>
           <Grid item>
             <a href='https://azure.microsoft.com/en-us/'>
               <img
-                style={{ height: '16px' }}
+                style={{ height: '24px' }}
                 src={azureIcon}
                 alt='Microsoft Azure'
               />
@@ -59,7 +63,7 @@ export const Bottombar = () => {
           <Grid item>
             <a href='https://firebase.google.com/'>
               <img
-                style={{ height: '16px' }}
+                style={{ height: '24px' }}
                 src={firebaseIcon}
                 alt='Google Firebase'
               />
@@ -67,13 +71,16 @@ export const Bottombar = () => {
           </Grid>
           <Grid item>
             <a href='https://reactjs.org/'>
-              <img style={{ height: '16px' }} src={reactIcon} alt='React' />
+              <img style={{ height: '24px' }} src={reactIcon} alt='React' />
             </a>
           </Grid>
         </Grid>
       </Grid>
       <Grid item>
-        <Typography variant='body2' style={{ marginTop: '10px' }}>
+        <Typography
+          variant='body2'
+          style={{ marginTop: '10px', color: 'white' }}
+        >
           Copyright &#169; 2022 f12.website
         </Typography>
       </Grid>

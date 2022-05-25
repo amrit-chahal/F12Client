@@ -17,25 +17,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px 10px 0 0',
     textDecoration: 'none',
     color: '#ffffff',
-    fontSize: '20px',
-    margin: theme.spacing(5),
+    fontSize: '24px',
     '&:hover': {
-      background: '#008df5'
-    }
+      textDecoration: 'underline'
+    },
+
+    margin: theme.spacing(5)
   },
   activeLink: {
-    background: '#008df5'
+    color: '#10344e'
   },
   navbar: {
-    background:
-      'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 30%, rgba(0,24,36,1) 100%)',
-    paddingBottom: '10px',
-
-    paddingTop: '10vh',
-
-    zIndex: 100,
-    position: 'fixed',
-    top: 0
+    paddingTop: '5vh'
   },
   f12Heading: {
     color: '#fff',
@@ -57,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 110,
     width: '50px',
     height: '50px',
-    background: '#f05030',
+    background: '#ffe66e',
     borderRadius: '7px',
     transform: 'rotate(45deg)'
   }
@@ -102,19 +95,13 @@ export const Navbar = () => {
                 Propmate
               </NavLink>
               <NavLink
-                to='/developer_profile'
+                to='/about_me'
                 className={classes.link}
                 activeClassName={classes.activeLink}
               >
-                Dev Profile
+                About Me
               </NavLink>
-              <NavLink
-                to='/blog'
-                className={classes.link}
-                activeClassName={classes.activeLink}
-              >
-                Blog
-              </NavLink>
+
               <NavLink
                 to='/contact'
                 className={classes.link}

@@ -11,7 +11,7 @@ import {
   ContactFormSubmission,
   PropMate,
   Blog,
-  DeveloperProfile
+  AboutMe
 } from './pages';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
             />
             <Route path='/propmate' component={PropMate} />
             <Route path='/blog' component={Blog} />
-            <Route path='/developer_profile' component={DeveloperProfile} />
+            <Route path='/about_me' component={AboutMe} />
             <Route component={HomePage} />
           </Switch>
         </div>

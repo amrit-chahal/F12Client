@@ -2,21 +2,21 @@ import {
   Grid,
   makeStyles,
   Paper,
+  Typography,
   useMediaQuery,
   useTheme
 } from '@material-ui/core';
 import { ClassSharp } from '@material-ui/icons';
+import { url } from 'inspector';
 import React from 'react';
+import background from '../static/background.jpg';
 
 interface Props {}
 const useStyles = makeStyles((theme) => ({
-  imgMobile: {
-    maxWidth: '80vw',
-    margin: 'auto'
-  },
-  imgDesktop: {
-    width: '80vw',
-    maxWidth: '900px'
+  homeParentContainer: {
+    height: '60vh',
+    textAlign: 'center',
+    padding: '40px'
   }
 }));
 
@@ -24,8 +24,6 @@ export const HomePage = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down(900));
-  const f12Mobile = 'https://via.placeholder.com/728x728.png?text=f12.website';
-  const f12Desktop = 'https://via.placeholder.com/728x414.png?text=f12.website';
 
   return (
     <Grid
@@ -33,13 +31,29 @@ export const HomePage = () => {
       justifyContent='center'
       direction='column'
       alignItems='center'
+      alignContent='center'
+      className={classes.homeParentContainer}
     >
-      <Grid item xs={12}>
-        <img
-          className={isMobile ? classes.imgMobile : classes.imgDesktop}
-          src={isMobile ? f12Mobile : f12Desktop}
-          alt='f12 logo'
-        />
+      <Grid item >
+        <Typography
+          variant='h1'
+          style={{
+            fontFamily: 'Saira Stencil One',
+            color: '#ffe66e',
+            textShadow: '2px 2px  4px #000000'
+          }}
+        >
+          Full Stack Dev
+        </Typography>
+      </Grid>
+
+      <Grid item>
+        <Typography
+          variant='h4'
+          style={{ fontFamily: 'Dancing Script', color: 'white' }}
+        >
+          Your friendly neighbourhood developer
+        </Typography>
       </Grid>
     </Grid>
   );

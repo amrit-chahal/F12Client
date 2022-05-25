@@ -1,13 +1,12 @@
 import { Blog } from './Blog';
 import { ContactForm } from './ContactForm';
 import { ContactFormSubmission } from './ContactFormSubmission';
-import { DeveloperProfile } from './DeveloperProfile';
+import { AboutMe } from './AboutMe';
 import { HomePage } from './HomePage';
 import { PropMate } from './PropMate';
 export { Blog } from './Blog';
 export { ContactForm } from './ContactForm';
 export { ContactFormSubmission } from './ContactFormSubmission';
-export { DeveloperProfile } from './DeveloperProfile';
+export { AboutMe } from './AboutMe';
 export { HomePage } from './HomePage';
 export { PropMate } from './PropMate';
-

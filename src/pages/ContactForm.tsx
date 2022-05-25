@@ -57,21 +57,28 @@ export const ContactForm = () => {
       <Helmet>
         <title>F12 Contact</title>
       </Helmet>
-      <Grid
-        container
-        direction='row'
-        justifyContent='center'
-        alignItems='center'
+      <Paper
+        elevation={12}
         style={{
-          maxWidth: 450,
+          maxWidth: '1100px',
+          width: '80vw',
           margin: 'auto',
           paddingTop: '2vh',
           paddingBottom: '5vh'
-          
         }}
       >
-        <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: '30px 20px' }}>
+        <Grid
+          container
+          direction='column'
+          justifyContent='center'
+          style={{
+            padding: '30px 20px',
+            width: '90%',
+            maxWidth: '600px',
+            margin: 'auto'
+          }}
+        >
+          <Grid item xs={12}>
             <Formik
               validateOnChange={true}
               initialValues={{
@@ -132,7 +139,12 @@ export const ContactForm = () => {
                     <Form>
                       <Grid container direction='row' spacing={3}>
                         <Grid item xs={12}>
-                          <Typography variant='h5' color='primary' align='center' gutterBottom>
+                          <Typography
+                            variant='h5'
+                            color='primary'
+                            align='center'
+                            gutterBottom
+                          >
                             Contact Me
                           </Typography>
                           <Typography
@@ -231,10 +243,11 @@ export const ContactForm = () => {
                 );
               }}
             </Formik>
-          </Paper>
-          {isSending && <LinearProgress />}
+
+            {isSending && <LinearProgress />}
+          </Grid>
         </Grid>
-      </Grid>
+      </Paper>
     </div>
   );
 };

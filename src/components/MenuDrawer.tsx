@@ -19,11 +19,10 @@ const useStyles = makeStyles(() => ({
     fontSize: '20px'
   },
   listItem: {
-    borderTop: '1px solid #fff',
+    borderTop: '1px solid rgba(255, 255, 130, 0.3)',
     textAlign: 'center',
     display: 'block',
-    background:
-    'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 50%, rgba(0,24,36,1) 100%)',
+    background: 'linear-gradient(-45deg, #564558,  #151f2a, #764e7a)',
     '&:hover': {
       cursor: 'pointer',
       color: '#fff',
@@ -35,8 +34,7 @@ const useStyles = makeStyles(() => ({
     color: '#fff'
   },
   appBar: {
-    background:
-    'linear-gradient(90deg, rgba(0,24,36,1) 0%, rgba(9,59,121,1) 50%, rgba(0,24,36,1) 100%)',
+    background: 'linear-gradient(-45deg, #564558,  #151f2a, #764e7a)',
     zIndex: 1,
     position: 'fixed',
     bottom: 0,
@@ -83,21 +81,12 @@ export const MenuDrawer = (props: Props) => {
             onClick={() => setOpenDrawer(false)}
           >
             <ListItemText>
-              <NavLink to='/developer_profile' className={classes.link}>
-                Dev Profile
+              <NavLink to='/about_me' className={classes.link}>
+                About Me
               </NavLink>
             </ListItemText>
           </ListItem>
-          <ListItem
-            className={classes.listItem}
-            onClick={() => setOpenDrawer(false)}
-          >
-            <ListItemText>
-              <NavLink to='/blog' className={classes.link}>
-                Blog
-              </NavLink>
-            </ListItemText>
-          </ListItem>
+
           <ListItem
             className={classes.listItem}
             onClick={() => setOpenDrawer(false)}
